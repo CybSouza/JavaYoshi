@@ -11,13 +11,15 @@ public class Conta {
         System.out.println("saldo atual: "+this.saldo+"\n");
     }
     
-    void saca(double quantidade){
+    boolean saca(double quantidade){
         double novoSaldo = this.saldo - quantidade;
         if (novoSaldo<0) {
             System.out.println("Sem saldo suficiente para sacar "+quantidade+". Saldo atual: " + this.saldo);
+            return false;
         } else {
             this.saldo = novoSaldo;
             System.out.println("Saque de "+quantidade+" efetuado com sucesso. Saldo atual: " + this.saldo);
+            return true;
         }
     }
     

@@ -17,13 +17,13 @@ public class Main {
         c2.titular = cli2;
         c2.numero = 23456;
         c2.saldo = 100;
-        
-        conta.exibirDadosConta();       
+     
         c2.exibirDadosConta();
-        
-        conta.transfere(c2,200);
-        
-        conta.exibirDadosConta();
-        c2.exibirDadosConta();
+        boolean teste = c2.saca(100);
+        if (teste) {
+            System.out.println("funfou");
+        } else {
+            System.out.println("n funfou");
+        }
     }   
 }
